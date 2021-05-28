@@ -1,3 +1,3 @@
-# Pocker game
+# Poker game
 
 Still under process
