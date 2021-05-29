@@ -100,26 +100,40 @@ bool Check::IsFlush(int cards[]){
 }
 
 bool Check::IsFullHouse(int cards[]){
-  int count = 0;
-  int compare=0,nums_cards=0;
-  for ( int i = 0; i < 5; i++ ){
-    for ( int j = 0; j < i; j++){
-      if (cards[i]%13 == cards[j]%13 && cards[i] != compare){ 
-        nums_cards +=1;
-        compare = cards[i];
-      }
-      if (cards[i]%13 == cards[j]%13){
-        count +=1;
-      }
+  int compare = 52;
+  int count1, count4; 
+  for ( int i = 0; i < 5; i ++){
+    int count3 = 0;
+    for ( int j = 0 ; j <5; j++){
+      if ( (cards[j]%13 == cards[i]%13) && count3 !=3){
+        count3= count3+1;
+        cout <<count3 <<endl;
+      } 
+    }
+    if ( count3 == 3){
+      compare = cards[i];
+      count1 = count3;
+      break;
     }
   }
-  if (count == 4 && nums_cards ==2){
+  for ( int i = 0; i < 5; i ++){
+    int count2 =0;
+    for ( int j = 0 ; j <5; j++){
+      if ( (cards[i]%13 == cards[j] %13 && count2 !=2) && cards[i] != compare){
+        count2++;
+      } 
+    }
+    if (count2 ==2){
+      count4 = count2;
+      break;
+    }
+  }
+  if ( count1 ==3 && count4 == 2){
     return true;
   } else{
     return false;
   }
 }
-
 bool Check::IsFourOfAKind(int cards[]){
   for (int i = 0; i <13; i++){
     int count = 0;
