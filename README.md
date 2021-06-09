@@ -11,9 +11,9 @@
 1. Generation of Random game sets or events.
 2. Data structure for storing game status.
 3. File I/O:
-  - The game will be saved in txt file every time you stop playing the game. 
+    - The game will be saved in txt file every time you stop playing the game. 
 5. Program codes in multiple files:
-  - The whole program of the game will be separated into various files, such as (.cpp and .h files).
+    - The whole program of the game will be separated into various files, such as (.cpp and .h files).
 
 ## To Run
 We have put all the files needed (.cpp .h .txt and makefiles) in folder name 'testfiles' . 
