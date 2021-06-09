@@ -1,5 +1,5 @@
 playgame: game.o check.o gameai.o main.o
-  g++ game.o check.o gameai.o main.o -o playgame
+	g++ game.o check.o gameai.o main.o -o playgame
 
 game.o: game.cpp game.h
 	g++ -c game.cpp
