@@ -227,7 +227,7 @@ void Game::startgame(int aicards[], int cards[], int &money, int &aimoney, int &
 
 string Game::playerbet(int &money, int &bet){
   string answer; 
-  cout << "Would you like to \'GO\'? (Y/N)" << endl;
+  cout << "Would you like to \'GO\'? (y/n)" << endl;
   cin >> answer;
   if (answer == "Y" || answer == "y"){
     playermoney(money, bet);
